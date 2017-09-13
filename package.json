@@ -1,13 +1,13 @@
 {
   "name": "mb3-basemapping-europa",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "mini project to try out diff mapping platforms for mapping europe for futurama data viz",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --inspect server/nodeServer.js",
+    "build1": "babel ./client/src/scripts/main.js -o ./client/src/scripts/main.babel.js" 
   },
   "keywords": [],
-  "author": "",
+  "author": "bill.lorand@daimler.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.1",
@@ -16,5 +16,9 @@
     "express": "^4.15.4",
     "jade": "^1.11.0",
     "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
   }
 }
