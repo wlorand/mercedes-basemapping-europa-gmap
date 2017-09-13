@@ -1,0 +1,29 @@
+/**
+ * file: fonts.css
+ */
+
+/* SF fonts x 5 */
+@font-face {
+  font-family: 'SF-Bold';
+  src: url('../assets/fonts/SF/SF-Display-Bold.otf');
+}
+
+@font-face {
+  font-family: 'SF-Semibold';
+  src: url('../assets/fonts/SF/SF-Display-Semibold.otf');
+}
+
+@font-face {
+  font-family: 'SF-Regular';
+  src: url('../assets/fonts/SF/SF-Display-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SF-Light';
+  src: url('../assets/fonts/SF/SF-Display-Light.otf');
+}
+
+@font-face {
+  font-family: 'SF-Ultralight';
+  src: url('../assets/fonts/SF/SF-Display-Ultralight.otf');
+}

@@ -1,0 +1,32 @@
+/**
+ * file: style.css
+ */
+
+/* todo: move to sass so imports are not another http request */
+@import 'fonts.css';
+
+body {
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
+ h1 {
+ 	color: rgb(255, 255, 255);
+ 	display: inline;
+ 	margin-left: 15px;
+ 	font-size: 36px;
+ 	font-family: 'SF-Light', 'Arial', 'sans-serif';
+ }
+
+/* layout styles */
+.logo-test {
+	width: 15%;
+}
+
+.logo-test-image {
+	vertical-align: -140%;
+}
+
+.pagetitle-test {	
+	width: 85%;
+}

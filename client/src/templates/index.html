@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basemapping Europa for MB-RD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="icon" href="assets/images/favicon.ico" />
+	<link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+	<div>	
+		<span class="logo-test">
+			<img src="assets/images/appletouchicon.png" class="logo-test-image" alt="MBRDNA" title="MBRDNA" />
+		</span>
+		<span class="pagetitle-test">
+			<h1>Basemapping Europa for MB-RD</h1>
+		</span>
+	</div>
+	
+		<!-- div to render chart into -->
+		<div id="map-container"></div>
+
+		<!-- load js libraries // todo: bundle these with browserify -->
+		<script src="scripts/vendor/jquery-3.2.1.min.js"></script>
+		<script src="scripts/vendor/d3.v4.min.js"></script>
+
+		<!-- load local web app scripts -->
+		<script src="scripts/main.js"></script>
+</body>
+</html>
