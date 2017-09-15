@@ -4,6 +4,7 @@
 
 /* todo: move to sass so imports are not another http request */
 @import 'fonts.css';
+@import 'map.css';
 
 body {
 	background: rgb(0, 0, 0);
