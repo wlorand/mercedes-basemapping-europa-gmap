@@ -4,7 +4,7 @@
   "description": "mini project to try out diff mapping platforms for mapping europe for futurama data viz",
   "scripts": {
     "start": "node --inspect server/nodeServer.js",
-    "build1": "babel ./client/src/scripts/main.js -o ./client/src/scripts/main.babel.js" 
+    "transpileJS": "babel ./client/src/scripts/main.js -o ./client/src/scripts/main.babel.js" 
   },
   "keywords": [],
   "author": "bill.lorand@daimler.com",
