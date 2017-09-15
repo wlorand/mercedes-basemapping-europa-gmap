@@ -1,0 +1,122 @@
+{"data": [
+	{
+		"country": "Germany",
+		"lat": 51.165691,
+		"lng": 10.451526
+	},
+	{
+		"country": "Switzerland",
+		"lat": 46.818188,
+		"lng": 8.227512	
+	},
+	{
+		"country": "Italy",
+		"lat": 41.87194,
+		"lng": 12.56738	
+	},
+	{
+		"country": "Belgium",
+		"lat": 50.503887,
+		"lng": 4.469936	
+	},
+	{
+		"country": "France",
+		"lat": 46.227638,
+		"lng": 2.213749	
+	},
+	{
+		"country": "Czech Republic",
+		"lat": 49.817492,
+		"lng": 15.472962	
+	},
+	{
+		"country": "Austria",
+		"lat": 47.516231,
+		"lng": 14.550072	
+	},
+	{
+		"country": "Monaco",
+		"lat": 43.738418,
+		"lng": 7.424616	
+	},
+	{
+		"country": "Denmark",
+		"lat": 56.26392,
+		"lng": 9.501785
+	},
+	{
+		"country": "Sweden",
+		"lat": 60.128161,
+		"lng": 18.643501	
+	},
+	{
+		"country": "Netherlands",
+		"lat": 52.132633,
+		"lng": 5.291266
+	},
+	{
+		"country": "United Kingdom",
+		"lat": 55.378051,
+		"lng": -3.435973	
+	},
+	{
+		"country": "Portugal",
+		"lat": 39.399872,
+		"lng": -8.224454
+	},
+	{
+		"country": "Poland",
+		"lat": 51.919438,
+		"lng": 19.145136
+	},
+	{
+		"country": "Spain",
+		"lat": 40.463667,
+		"lng": -3.74922	
+	},
+	{
+		"country": "Slovenia",
+		"lat": 46.151241,
+		"lng": 14.995463	
+	},
+	{
+		"country": "Croatia",
+		"lat": 45.1,
+		"lng": 15.2	
+	},
+	{
+		"country": "Norway",
+		"lat": 60.472024,
+		"lng": 8.468946	
+	},
+	{
+		"country": "Hungary",
+		"lat": 47.162494,
+		"lng": 19.503304
+	},
+	{
+		"country": "Slovakia",
+		"lat": 48.669026,
+		"lng": 19.699024
+	},
+	{
+		"country": "Turkey",
+		"lat": 38.963745,
+		"lng": 35.243322
+	},
+	{
+		"country": "Finland",
+		"lat": 61.92411,
+		"lng": 25.748151
+	},
+	{
+		"country": "Macedonia",
+		"lat": 41.608635,
+		"lng": 21.745275
+	},
+	{
+		"country": "Greece",
+		"lat": 39.074208,
+		"lng": 21.824312	
+	}
+]}

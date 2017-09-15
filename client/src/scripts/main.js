@@ -15,11 +15,18 @@ function initMap(){
 				{ invert_lightness: false},
             	{ saturation: -20 }
 			]
-		} 
+		},
+		{
+    		featureType: "administrative.locality",
+    		elementType: "labels",
+    		stylers: [
+      			{ visibility: "off" }
+    		]
+    	} 
 	];
 
 	const mapOptions = {
-    	zoom: 6,
+    	zoom: 5,
       	center: germanyCenter,
       	mapTypeId: google.maps.MapTypeId.TERRAIN, // ROADMAP  / TERRAIN / SATELLITE 
     	// controls
@@ -36,6 +43,12 @@ function initMap(){
 
     // 2- create the Map object 
     const map = new google.maps.Map(mapDiv, mapOptions);
+
+
+    // 3- fetch some data for map markers
+    $.getJSON('../data/euroCountryCentroids.json', function(data) {
+		console.log({data});
+	});
 
 }
 
