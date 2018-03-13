@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node --inspect server/nodeServer.js",
     "transJS": "babel ./client/src/scripts/main.js -o ./client/src/scripts/main.babel.js && babel ./client/src/scripts/map.js -o ./client/src/scripts/map.babel.js",
-    "bundleJS": "browserify ./client/src/scripts/main.babel.js -o ./client/src/scripts/bundle.js"
+    "bundleJS": "browserify ./client/src/scripts/main.babel.js -o ./client/src/scripts/bundle.js",
+    "buildJS": "run-s transJS bundleJS"
   },
   "keywords": [],
   "author": "bill.lorand@daimler.com",
@@ -24,6 +25,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "browserify": "^14.4.0",
+    "npm-run-all": "^4.1.2",
     "watchify": "^3.9.0"
   }
 }

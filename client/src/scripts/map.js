@@ -1,11 +1,9 @@
 /** 
- * file: map.js
+ * file: map.js -- inside an IIFE
  *
  */ 
 
 const map = (function(){
-
-
 
 function initMap(){
 
@@ -14,6 +12,7 @@ function initMap(){
 	const germanyCenter = new google.maps.LatLng(51.165691, 10.451526); // centroid point de
 	const infoWin = new google.maps.InfoWindow({ maxWidth: 200 }); // do i need content obj prop here?
 
+	// gmap style as an array of objects
 	const tanEarthStyles = [
 		{
 		stylers: [
@@ -38,6 +37,7 @@ function initMap(){
     	}	 
 	];
 
+	// gmap options js object
 	const mapOptions = {
     	zoom: 5,
       	center: germanyCenter,
@@ -54,10 +54,10 @@ function initMap(){
     	styles: tanEarthStyles
     };
 
-    // 2- create the Map object 
+    // 2- create the main Map object -- takes a dom node to render and an options object 
     const map = new google.maps.Map(mapDiv, mapOptions);
 
-    // 3- fetch some data and make map markers
+    // 3- fetch some data and make map markers -- callback function that has data
     $.getJSON('../data/euroCountryCentroids.json', function(data) {
 		
 		data.forEach( function(elem, i){
@@ -72,9 +72,10 @@ function initMap(){
 	    		map: map,
 				icon:  '../assets/images/favicon-24x24.ico',
 				title: elem.country,
-				html: `<div class="info-window-text"> ${elem.country} <br /> Lat: ${lat3}, Long: ${lng3}</div>`
+				html: `<div class="info-window-text"> ${elem.country} <br /> Center Lat: ${lat3}, Center Long: ${lng3}</div>`
     		});	
 
+			// native JS Events
     		// 3b - wire up info windows to marker clicks (uses google maop events)
     		google.maps.event.addListener(countryMarker, 'click', function() {
 		    	infoWin.close(); 
@@ -90,7 +91,7 @@ function initMap(){
 }
 
 
-// Event Listeners
+// Event Listener to Fire the JS when the DOM is ready
 document.addEventListener('DOMContentLoaded', initMap);
 
 })();

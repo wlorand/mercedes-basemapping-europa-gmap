@@ -1,25 +1,25 @@
-#!/usr/bin/env node
+#!/usr/bin/env node  // WTF IS THIS -- this ain't perl
 
 /**
  * Module dependencies.
  */
 
-var http = require('http');
-var app = require('./expressApp');
-var debug = require('debug')('augdemo:server');
+const http = require('http');
+const app = require('./expressApp');
+const debug = require('debug')('augdemo:server');
 //var debug = require('debug');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3003');
-app.set('port', port);
+const port = normalizePort(process.env.PORT || '3003'); 
+// recall now process.env lets you set an environment var for dev vs staging vs prod
+app.set('port', port); // express setting
 
 /**
  * Create HTTP server.
  */
-
 var server = http.createServer(app);
 
 /**
@@ -27,11 +27,13 @@ var server = http.createServer(app);
  */
 
 server.listen(port);
+
+// set up some server events
 server.on('error', onError);
 server.on('listening', onListening);
 
 /**
- * Normalize a port into a number, string, or false.
+ * Normalize a port into a number, string, or false. -- util function
  */
 
 function normalizePort(val) {
@@ -52,14 +54,16 @@ function normalizePort(val) {
 
 function onError(error) {
   if (error.syscall !== 'listen') {
-    throw error;
+    throw error; // error just thrown, not handled -- where do they go when you just throw them?
   }
 
-  var bind = typeof port === 'string'
+  // typeof and ternary test -- i get it but this seems hard to digest and obtuse code
+  const bind = typeof port === 'string'
     ? 'Pipe ' + port
     : 'Port ' + port;
 
-  // handle specific listen errors with friendly messages
+  // handle specific listen errors with friendly messages 
+  //- i like this -- but is use of js switch statement a good pattern?
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
