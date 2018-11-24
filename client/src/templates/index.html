@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Basemapping Europa for MB-RD</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="icon" href="assets/images/favicon.ico" />
-	<link rel="stylesheet" href="styles/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basemapping Europa for Mercedes Benz R&D North America</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div>
+      <span class="logo-test">
+        <img
+          src="assets/images/appletouchicon.png"
+          class="logo-test-image"
+          alt="MBRDNA"
+          title="MBRDNA"
+        />
+      </span>
+      <span class="pagetitle-test">
+        <h1>Basemapping Europa for Mercedes Benz R&D North America</h1>
+      </span>
+    </div>
 
-	<div>	
-		<span class="logo-test">
-			<img src="assets/images/appletouchicon.png" class="logo-test-image" alt="MBRDNA" title="MBRDNA" />
-		</span>
-		<span class="pagetitle-test">
-			<h1>Basemapping Europa for MB-RD</h1>
-		</span>
-	</div>
-	
-		<!-- div to render chart into -->
-		<div id="map-container" class="map-container"></div>
+    <!-- div to render chart into -->
+    <div id="map-container" class="map-container"></div>
 
-		<!-- load js libraries // todo: bundle these with browserify -->
-		<script src="scripts/vendor/jquery-3.2.1.min.js"></script>
-		<script src="scripts/vendor/d3.v4.min.js"></script>
-		
-		<!-- load local web app scripts -->
-		<!-- <script src="scripts/main.babel.js"></script>  -->
-		<script src="scripts/map.babel.js"></script>
+    <!-- load js libraries // todo: bundle these with browserify -->
+    <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
+    <script src="scripts/vendor/d3.v4.min.js"></script>
 
-		<!-- load google maps (no api key) -->
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
-</body>
+    <!-- load local web app scripts -->
+    <!-- <script src="scripts/main.babel.js"></script> -->
+    <script src="scripts/map.babel.js"></script>
+
+    <!-- load google maps (added api key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjG-B1atL7aKsYTgjm07Z9DLFSJRDIvts"></script>
+  </body>
 </html>

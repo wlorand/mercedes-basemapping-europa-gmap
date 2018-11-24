@@ -13,7 +13,7 @@ const debug = require('debug')('augdemo:server');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3003'); 
+const port = normalizePort(process.env.PORT || '3000');
 // recall now process.env lets you set an environment var for dev vs staging vs prod
 app.set('port', port); // express setting
 
@@ -38,11 +38,13 @@ server.on('listening', onListening);
 
 function normalizePort(val) {
   var port = parseInt(val, 10);
-  if (isNaN(port)) { // named pipe
+  if (isNaN(port)) {
+    // named pipe
     return val;
   }
 
-  if (port >= 0) { // port number
+  if (port >= 0) {
+    // port number
     return port;
   }
   return false;
@@ -58,11 +60,9 @@ function onError(error) {
   }
 
   // typeof and ternary test -- i get it but this seems hard to digest and obtuse code
-  const bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
 
-  // handle specific listen errors with friendly messages 
+  // handle specific listen errors with friendly messages
   //- i like this -- but is use of js switch statement a good pattern?
   switch (error.code) {
     case 'EACCES':
@@ -84,8 +84,6 @@ function onError(error) {
 
 function onListening() {
   var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
+  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
